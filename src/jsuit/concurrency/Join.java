@@ -27,7 +27,7 @@ public class Join {
     @Override
     public void run() {
 
-      while (joinee.isAlive()) {
+      for (int i = 0; i < 16; i++) {
 
         System.out.printf("[Join.Joiner::run] I'm running! %n");
         try {
@@ -57,10 +57,10 @@ public class Join {
     @Override
     public void run() {
 
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 16; i++) {
         System.out.printf("[Join.Joinee::run] \t\tI'm running! %n");
         try {
-          sleep(1000);
+          sleep(200);
         } catch (InterruptedException e) {}
       }
 
